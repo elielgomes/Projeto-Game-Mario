@@ -24,6 +24,33 @@ body {
   background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
+.clouds {
+  position: absolute;
+  width: 550px;
+}
+
+.mario {
+  position: absolute;
+  width: 150px;
+  bottom: 0px;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.container-grama {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.grama {
+  height: 10px;
+  background: linear-gradient(to top, #006e3d 10%, #007B44 20%, #01C601);
+}
+
 .pipe {
   position: absolute;
   bottom: 0px;
@@ -34,7 +61,7 @@ body {
 
 .container-chao {
   width: 1000px;
-  height: 53px;
+  height: 26px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -50,22 +77,41 @@ body {
   bottom: 0px;
 }
 
-@keyframes chao1-animation-1 {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: -100%;
-  }
+.clouds-animation-1 {
+  animation-name: clouds-animation-1;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
-@keyframes chao2-animation-1 {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: 0%;
-  }
+
+.clouds-animation-2 {
+  animation-name: clouds-animation-2;
+  animation-duration: 18000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
+
+.clouds-animation-3 {
+  animation-name: clouds-animation-3;
+  animation-duration: 16000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.clouds-animation-4 {
+  animation-name: clouds-animation-4;
+  animation-duration: 14000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.clouds-animation-5 {
+  animation-name: clouds-animation-5;
+  animation-duration: 12000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 .animation-pipe-1 {
   animation-name: pipe-animation-1;
   animation-duration: 2000ms;
@@ -187,62 +233,132 @@ body {
 
 .animation-chao1-4 {
   animation-name: chao1-animation-1;
-  animation-duration: 1000ms;
+  animation-duration: 990ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .animation-chao2-4 {
   animation-name: chao2-animation-1;
-  animation-duration: 1000ms;
+  animation-duration: 990ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .animation-chao1-5 {
   animation-name: chao1-animation-1;
-  animation-duration: 900ms;
+  animation-duration: 720ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .animation-chao2-5 {
   animation-name: chao2-animation-1;
-  animation-duration: 900ms;
+  animation-duration: 720ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .animation-chao1-6 {
   animation-name: chao1-animation-1;
-  animation-duration: 600ms;
+  animation-duration: 680ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .animation-chao2-6 {
   animation-name: chao2-animation-1;
+  animation-duration: 680ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-chao1-7 {
+  animation-name: chao1-animation-1;
   animation-duration: 600ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.mario {
-  position: absolute;
-  width: 150px;
-  bottom: 0px;
+.animation-chao2-7 {
+  animation-name: chao2-animation-1;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.jump {
-  animation: jump 500ms ease-out;
+.animation-chao1-8 {
+  animation-name: chao1-animation-1;
+  animation-duration: 550ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.clouds {
-  position: absolute;
-  width: 550px;
-  animation: clouds-animation 20s infinite linear;
+.animation-chao2-8 {
+  animation-name: chao2-animation-1;
+  animation-duration: 550ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
+.animation-chao1-9 {
+  animation-name: chao1-animation-1;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-chao2-9 {
+  animation-name: chao2-animation-1;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-chao1-10 {
+  animation-name: chao1-animation-1;
+  animation-duration: 450ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-chao2-10 {
+  animation-name: chao2-animation-1;
+  animation-duration: 450ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-chao1-11 {
+  animation-name: chao1-animation-1;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-chao2-11 {
+  animation-name: chao2-animation-1;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes chao1-animation-1 {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes chao2-animation-1 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
 @keyframes pipe-animation-1 {
   0% {
     left: 100%;
@@ -317,7 +433,7 @@ body {
 }
 @keyframes pipe-animation-10 {
   0% {
-    left: 300%;
+    left: 400%;
   }
   100% {
     left: -400px;
@@ -340,9 +456,41 @@ body {
     bottom: 0px;
   }
 }
-@keyframes clouds-animation {
+@keyframes clouds-animation-1 {
   from {
-    right: -550px;
+    right: -600px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes clouds-animation-2 {
+  from {
+    right: -650px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes clouds-animation-3 {
+  from {
+    right: -700px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes clouds-animation-4 {
+  from {
+    right: -750px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes clouds-animation-4 {
+  from {
+    right: -800px;
   }
   to {
     right: 100%;

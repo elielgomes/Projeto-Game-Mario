@@ -1,4 +1,4 @@
-@mixin animation-velocity($name, $duration, $timing, $iteration){
+@mixin animation-velocity($name, $duration, $timing, $iteration) {
     animation-name: $name;
     animation-duration: $duration;
     animation-iteration-count: $iteration;
@@ -29,7 +29,32 @@ body {
     overflow: hidden;
     position: relative;
     background: linear-gradient(#87CEEB, #E0F6FF);
-    // border-bottom: 15px solid rgb(35, 160, 35) ;
+}
+.clouds {
+    position: absolute;
+    width: 550px;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.container-grama {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.grama {
+    height: 10px;
+    background: linear-gradient(to top, #006e3d 10%, #007B44 20%, #01C601);
 }
 
 .pipe {
@@ -42,7 +67,7 @@ body {
 
 .container-chao {
     width: 1000px;
-    height: 53px;
+    height: 26px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -56,263 +81,4 @@ body {
 .chao-2 {
     position: absolute;
     bottom: 0px;
-}
-
-
-@keyframes chao1-animation-1 {
-    0% {
-        left: 0%;
-    }
-
-    100% {
-        left: -100%;
-    }
-}
-
-@keyframes chao2-animation-1 {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-
-//[VELOCIDADE PIPE]
-.animation-pipe-1 {
-    @include animation-velocity(pipe-animation-1, 2000ms, linear, infinite)
-}
-.animation-pipe-2 {
-    @include animation-velocity(pipe-animation-2, 1900ms, linear, infinite)
-}
-.animation-pipe-3 {
-    @include animation-velocity(pipe-animation-3, 1800ms, linear, infinite)
-}
-.animation-pipe-4 {
-    @include animation-velocity(pipe-animation-4, 1700ms, linear, infinite)
-}
-.animation-pipe-5 {
-    @include animation-velocity(pipe-animation-5, 1600ms, linear, infinite)
-}
-.animation-pipe-6 {
-    @include animation-velocity(pipe-animation-6, 1500ms, linear, infinite)
-}
-.animation-pipe-7 {
-    @include animation-velocity(pipe-animation-7, 1400ms, linear, infinite)
-}
-.animation-pipe-8 {
-    @include animation-velocity(pipe-animation-8, 1300ms, linear, infinite)
-}
-.animation-pipe-9 {
-    @include animation-velocity(pipe-animation-9, 1200ms, linear, infinite)
-}
-.animation-pipe-10 {
-    @include animation-velocity(pipe-animation-9, 1000ms, linear, infinite)
-}
-.animation-pipe-11 {
-    @include animation-velocity(pipe-animation-10, 800ms, linear, infinite)
-}
-
-
-// [VELOCIDADE CHAO]
-
-//velocidade 1
-.animation-chao1-1 {
-    @include animation-velocity(chao1-animation-1, 1650ms, linear, infinite)
-}
-.animation-chao2-1 {
-    @include animation-velocity(chao2-animation-1, 1650ms, linear, infinite)
-}
-
-//velocidade 2
-.animation-chao1-2 {
-    @include animation-velocity(chao1-animation-1, 1550ms, linear, infinite)
-}
-.animation-chao2-2 {
-    @include animation-velocity(chao2-animation-1, 1550ms, linear, infinite)
-}
-
-//velocidade 3
-.animation-chao1-3 {
-    @include animation-velocity(chao1-animation-1, 1050ms, linear, infinite)
-}
-.animation-chao2-3 {
-    @include animation-velocity(chao2-animation-1, 1050ms, linear, infinite)
-}
-
-//velocidade 4
-.animation-chao1-4 {
-    @include animation-velocity(chao1-animation-1, 1000ms, linear, infinite)
-}
-.animation-chao2-4 {
-    @include animation-velocity(chao2-animation-1, 1000ms, linear, infinite)
-}
-
-//velocidade 5
-.animation-chao1-5 {
-    @include animation-velocity(chao1-animation-1, 900ms, linear, infinite)
-}
-.animation-chao2-5 {
-    @include animation-velocity(chao2-animation-1, 900ms, linear, infinite)
-}
-
-//velocidade 6
-.animation-chao1-6 {
-    @include animation-velocity(chao1-animation-1, 600ms, linear, infinite)
-}
-.animation-chao2-6 {
-    @include animation-velocity(chao2-animation-1, 600ms, linear, infinite)
-}
-
-
-
-.mario {
-    position: absolute;
-    width: 150px;
-    bottom: 0px;
-}
-
-.jump {
-    animation: jump 500ms ease-out;
-}
-
-.clouds {
-    position: absolute;
-    width: 550px;
-    animation: clouds-animation 20s infinite linear;
-}
-
-//////////////////////
-
-@keyframes pipe-animation-1 {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-2 {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-3 {
-    0% {
-        left: 150%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-4 {
-    0% {
-        left: 150%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-5 {
-    0% {
-        left: 200%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-6 {
-    0% {
-        left: 200%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-7 {
-    0% {
-        left: 250%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-8 {
-    0% {
-        left: 250%;
-    }
-
-    100% {
-        left: -200px;
-    }
-}
-
-@keyframes pipe-animation-9 {
-    0% {
-        left: 300%;
-    }
-
-    100% {
-        left: -400px;
-    }
-}
-@keyframes pipe-animation-10 {
-    0% {
-        left: 300%;
-    }
-
-    100% {
-        left: -400px;
-    }
-}
-
-@keyframes jump {
-    0% {
-        bottom: 0px;
-    }
-
-    40% {
-        bottom: 180px;
-    }
-
-    50% {
-        bottom: 180px;
-    }
-
-    60% {
-        bottom: 180px;
-    }
-
-    100% {
-        bottom: 0px;
-    }
-}
-
-@keyframes clouds-animation {
-    from {
-        right: -550px;
-    }
-
-    to {
-        right: 100%;
-    }
 }
