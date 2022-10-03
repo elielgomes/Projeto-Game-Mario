@@ -5,6 +5,11 @@
     animation-timing-function: $timing;
 }
 
+@font-face {
+    font-family: "super-mario";
+    src: url("../assets/Super-Mario-World.ttf") format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,13 +18,28 @@
 }
 
 body {
-    background-color: black;
+    height: 100vh;
+    background-image: url('../assets/te28nshadog61.webp');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img#frame{
+position: absolute;
+width: 1092px;
+pointer-events: none;
 }
 
 #text-score {
-    font-size: 50px;
+    font-family: 'super-mario';
+    text-shadow: 3px 3px 2px black;
+    font-size: 35px;
     text-align: center;
     color: white;
+    text-align: end;
+    margin-right: 30px;
 }
 
 .game-board {
@@ -32,7 +52,8 @@ body {
 }
 .clouds {
     position: absolute;
-    width: 550px;
+    margin-top: 5px;
+    width: 500px;
 }
 
 .mario {
@@ -63,6 +84,7 @@ body {
     width: 80px;
     height: 80px;
     left: -80px;
+    animation-delay: 2s;
 }
 
 .container-chao {

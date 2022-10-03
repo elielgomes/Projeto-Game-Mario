@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "super-mario";
+    src: url("../assets/Super-Mario-World.ttf") format('truetype');
+}
+
+
+#logo-supermario{
+width: 500px;
+
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.card > p{
+    font-family: 'super-mario';
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+
+button#play{
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px black;
+    color: #fff;
+    font-family: "super-mario";
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+}

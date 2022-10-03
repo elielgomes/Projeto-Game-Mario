@@ -18,7 +18,8 @@
 
 //[VELOCIDADE PIPE]
 .animation-pipe-1 {
-    @include animation-velocity(pipe-animation-1, 2000ms, linear, infinite)
+    @include animation-velocity(pipe-animation-1, 2000ms, linear, infinite);
+ 
 }
 
 .animation-pipe-2 {

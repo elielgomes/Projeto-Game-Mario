@@ -1,12 +1,19 @@
+const body = document.querySelector('body');
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
 const pipeAnimation = document.querySelector('.pipe-animation');
 const chao1 = document.querySelector(".chao-1");
 const chao2 = document.querySelector(".chao-2");
+const buttonPlay = document.getElementById("play");
 let displayScore = document.getElementById("text-score");
 let pipePosition;
-let score = 0;
+
+let gameData = JSON.parse(localStorage.getItem('gameData') ?? '{}');
+gameData.maxScore = gameData.maxScore ?? 0;
+
+let score = 0 ;
+
 
 const jump = () => {
   mario.classList.add('jump');
@@ -16,21 +23,23 @@ const jump = () => {
   }, 500);
 };
 
-
 const increaseScore = setInterval(() => {
   score += 1;
   displayScore.textContent = score 
 }, 1000);
 
-function loop() {
+
+function reloadFrame(){
+  location.reload()
+}
+
+function verifica(){
+
   pipePosition = pipe.offsetLeft;
   const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
   const cloudsPostion = clouds.offsetLeft;
   const chao1Position = chao1.offsetLeft;
   const chao2Position = chao2.offsetLeft;
-  console.log(cloudsPostion)
-
-  //[VERIFICAÇÃO DE PERDA]
 
   if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
 
@@ -52,10 +61,45 @@ function loop() {
 
     chao2.style.animation = 'none';
     chao2.style.left = `${chao2Position}px`;
-    
-    clearInterval(increaseScore);
-  };
 
+    
+    clearInterval(loop)
+    clearInterval(increaseScore);
+
+    if(score > gameData.maxScore){
+      gameData.maxScore = score;
+
+      localStorage.setItem('gameData', JSON.stringify(gameData))
+      createCard()
+
+      let recordScore = document.querySelector(".record-score");
+      let lastScore = document.querySelector(".last-score");
+  
+      lastScore.textContent = `Last score: ${gameData.lastScore}`
+      recordScore.textContent = `Record score: ${gameData.maxScore}`
+
+    }
+    else{
+      
+      localStorage.setItem('gameData', JSON.stringify(gameData))
+      createCard()
+
+      let recordScore = document.querySelector(".record-score");
+      let lastScore = document.querySelector(".last-score");
+  
+      lastScore.textContent = `Last score: ${gameData.lastScore}`
+      recordScore.textContent = `Record score: ${gameData.maxScore}`
+    }
+
+
+  };
+}
+
+function velocidade(){
+
+  pipePosition = pipe.offsetLeft;
+  const cloudsPostion = clouds.offsetLeft;
+  
 
   if (score > 20 && score < 40 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-1');
@@ -142,9 +186,29 @@ function loop() {
     clouds.classList.remove('clouds-animation-4');
     clouds.classList.add('clouds-animation-5');
   } 
-  requestAnimationFrame(loop);
-};
+}
 
-loop();
+let loop = setInterval(()=>{
+  verifica()
+  velocidade()
+},10)
 
 document.addEventListener('keydown', jump);
+
+
+function createCard(){
+  body.innerHTML += `
+  <div class="card">
+  <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
+  <p class="record-score"></p>
+  <p class="last-score"></p>
+  <button type="button"  onclick="reloadFrame()" id="play">PLAY</button>
+</div>
+
+  `
+}
+
+
+function createCardNewRecord(){
+  
+}
