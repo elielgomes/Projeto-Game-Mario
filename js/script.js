@@ -5,7 +5,6 @@ const clouds = document.querySelector('.clouds');
 const pipeAnimation = document.querySelector('.pipe-animation');
 const chao1 = document.querySelector(".chao-1");
 const chao2 = document.querySelector(".chao-2");
-const buttonPlay = document.getElementById("play");
 let displayScore = document.getElementById("text-score");
 let pipePosition;
 
@@ -13,7 +12,6 @@ let gameData = JSON.parse(localStorage.getItem('gameData') ?? '{}');
 gameData.maxScore = gameData.maxScore ?? 0;
 
 let score = 0 ;
-
 
 const jump = () => {
   mario.classList.add('jump');
@@ -25,7 +23,7 @@ const jump = () => {
 
 const increaseScore = setInterval(() => {
   score += 1;
-  displayScore.textContent = score 
+  displayScore.textContent = score * 10; 
 }, 1000);
 
 
@@ -49,9 +47,8 @@ function verifica(){
     mario.style.animation = 'none';
     mario.style.bottom = `${marioPosition}px`;
 
-    mario.src = 'assets/game-over.png'
-    mario.style.width = '75px'
-    mario.style.marginLeft = '50px'
+    mario.src = 'assets/game-over.png';
+    mario.classList.add('mobile-mario');
 
     clouds.style.left = `${cloudsPostion}px`
     clouds.style.animation = 'none';
@@ -68,27 +65,18 @@ function verifica(){
 
     if(score > gameData.maxScore){
       gameData.maxScore = score;
-
-      localStorage.setItem('gameData', JSON.stringify(gameData))
-      createCard()
-
+      localStorage.setItem('gameData', JSON.stringify(gameData));
+      createCardNewRecord();
       let recordScore = document.querySelector(".record-score");
-      let lastScore = document.querySelector(".last-score");
-  
-      lastScore.textContent = `Last score: ${gameData.lastScore}`
-      recordScore.textContent = `Record score: ${gameData.maxScore}`
-
+      recordScore.textContent = `New record: ${gameData.maxScore * 10}`;
     }
     else{
-      
       localStorage.setItem('gameData', JSON.stringify(gameData))
       createCard()
-
       let recordScore = document.querySelector(".record-score");
       let lastScore = document.querySelector(".last-score");
-  
-      lastScore.textContent = `Last score: ${gameData.lastScore}`
-      recordScore.textContent = `Record score: ${gameData.maxScore}`
+      lastScore.textContent = `Last score: ${score * 10}`
+      recordScore.textContent = `Record score: ${gameData.maxScore * 10}`
     }
 
 
@@ -193,22 +181,33 @@ let loop = setInterval(()=>{
   velocidade()
 },10)
 
-document.addEventListener('keydown', jump);
-
 
 function createCard(){
   body.innerHTML += `
   <div class="card">
-  <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
-  <p class="record-score"></p>
-  <p class="last-score"></p>
-  <button type="button"  onclick="reloadFrame()" id="play">PLAY</button>
-</div>
-
+   <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
+    <p class="text-card record-score"></p>
+    <p class="text-card last-score"></p>
+  <button type="button" onclick="reloadFrame()" id="play">PLAY</button>
+  </div>
   `
 }
 
-
 function createCardNewRecord(){
-  
+  mario.style.display = 'none';
+  body.innerHTML += `
+  <div class="card">
+  <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
+  <p class="text-card record-score"></p>
+  <button type="button" onclick="reloadFrame()" id="play">PLAY</button>
+  <img src="assets/mario-win.png" alt="win" id="mario-win">
+  </div>
+  `
+  let buttonPlay = document.getElementById("play");
+  buttonPlay.style.marginTop = '14px';
 }
+
+document.addEventListener('keydown', jump);
+document.addEventListener('touchstart', jump);
+
+

@@ -26,10 +26,10 @@ body {
     align-items: center;
 }
 
-img#frame{
-position: absolute;
-width: 1092px;
-pointer-events: none;
+img#frame {
+    position: absolute;
+    width: 1092px;
+    pointer-events: none;
 }
 
 #text-score {
@@ -50,6 +50,7 @@ pointer-events: none;
     position: relative;
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
+
 .clouds {
     position: absolute;
     margin-top: 5px;
@@ -103,4 +104,136 @@ pointer-events: none;
 .chao-2 {
     position: absolute;
     bottom: 0px;
+}
+
+#logo-supermario {
+    width: 500px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    width: 700px;
+    height: 500px;
+
+}
+
+.text-card {
+    font-family: 'super-mario';
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+
+button#play {
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px black;
+    color: #fff;
+    font-family: "super-mario";
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+#mario-win {
+    width: 75px;
+}
+
+.mobile-mario {
+    width: 75px !important;
+    margin-left: 50px !important;
+}
+
+@media (max-width: 1000px) {
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-image: none;
+        background-size: none;
+    }
+
+    img#frame {
+        display: none;
+    }
+
+    #text-score {
+        text-shadow: 2px 2px 2px black;
+        font-size: 12px;
+        margin-right: 20px;
+    }
+
+    .game-board {
+        width: 100vw;
+        max-height: 90vh; //!!
+    }
+
+    .clouds {
+        width: 300px;
+    }
+
+    .mario {
+        width: 90px;
+    }
+
+    .jump {
+        animation: jump 500ms ease-out;
+    }
+
+    .container-grama {
+        width: 100vw;
+    }
+
+    .grama {
+        height: 10px;
+        background: linear-gradient(to top, #006e3d 10%, #007B44 20%, #01C601);
+    }
+
+    .pipe {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container-chao {
+        width: 100vw;
+        height: 26px;
+    }
+
+    #logo-supermario {
+        width: 200px;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        width: 300px;
+        height: 200px;
+    }
+
+    .text-card {
+        font-size: 12px;
+    }
+
+    button#play {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    #mario-win {
+        margin-top: 31px;
+        width: 50px;
+    }
+
+    .mobile-mario {
+        width: 50px !important;
+        margin-left: 67px !important;
+    }
+
 }
