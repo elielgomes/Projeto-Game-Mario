@@ -192,19 +192,10 @@ button {
         width: 90px;
     }
 
-    .jump {
-        animation: jump 500ms ease-out;
-    }
-
     .container-grama {
         width: 100vw;
     }
-
-    .grama {
-        height: 10px;
-        background: linear-gradient(to top, #006e3d 10%, #007B44 20%, #01C601);
-    }
-
+    
     .pipe {
         width: 50px;
         height: 50px;
@@ -218,14 +209,8 @@ button {
     #logo-supermario {
         width: 200px;
     }
-
+  
     .card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 15px;
-        position: absolute;
         width: 300px;
         height: 200px;
     }
@@ -240,7 +225,7 @@ button {
     }
 
     #mario-win {
-        margin-top: 31px;
+       margin-top: 10px;
         width: 50px;
     }
 
