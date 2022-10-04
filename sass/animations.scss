@@ -360,3 +360,27 @@
     }
 }
 
+@media (max-width:1000px){
+
+    @keyframes jump {
+        0% {
+            bottom: 0px;
+        }
+    
+        40% {
+            bottom: 120px;
+        }
+    
+        50% {
+            bottom: 120px;
+        }
+    
+        60% {
+            bottom: 120px;
+        }
+    
+        100% {
+            bottom: 0px;
+        }
+    }
+}
