@@ -52,7 +52,7 @@ function reloadFrame() {
 }
 function verifica() {
   pipePosition = pipe.offsetLeft;
-  let pipePositionRefer = pipe.width + 40
+  let pipePositionRefer = pipe.width + 35
   const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
   const cloudsPostion = clouds.offsetLeft;
   const chao1Position = chao1.offsetLeft;
