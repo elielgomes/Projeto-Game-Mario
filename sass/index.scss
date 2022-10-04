@@ -142,9 +142,11 @@ button#play {
     width: 75px;
 }
 
-.mobile-mario {
-    width: 75px !important;
-    margin-left: 50px !important;
+.mario-lose {
+    position: absolute;
+    width: 75px;
+    margin-left: 50px;
+    bottom: 0px;
 }
 
 @media (max-width: 1000px) {
@@ -232,9 +234,10 @@ button#play {
         width: 50px;
     }
 
-    .mobile-mario {
-        width: 50px !important;
-        margin-left: 67px !important;
+    .mario-lose {
+        width: 50px;
+        margin-left: 67px;
+        position: absolute;
     }
 
 }

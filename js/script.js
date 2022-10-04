@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const mario = document.querySelector('.mario');
+const mario = document.querySelector('#mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
 const pipeAnimation = document.querySelector('.pipe-animation');
@@ -39,7 +39,7 @@ function verifica(){
   const chao1Position = chao1.offsetLeft;
   const chao2Position = chao2.offsetLeft;
 
-  if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
+  if (pipePosition <= 120 && pipePosition > 0 && marioPosition < pipe.height) {
 
     pipe.style.animation = 'none';
     pipe.style.left = `${pipePosition}px`;
@@ -48,7 +48,8 @@ function verifica(){
     mario.style.bottom = `${marioPosition}px`;
 
     mario.src = 'assets/game-over.png';
-    mario.classList.add('mobile-mario');
+    mario.classList.add('mario-lose');
+    mario.classList.remove('mario');
 
     clouds.style.left = `${cloudsPostion}px`
     clouds.style.animation = 'none';
