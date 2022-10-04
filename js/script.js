@@ -52,11 +52,12 @@ function reloadFrame() {
 }
 function verifica() {
   pipePosition = pipe.offsetLeft;
+  let pipePositionRefer = pipe.width + 40
   const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
   const cloudsPostion = clouds.offsetLeft;
   const chao1Position = chao1.offsetLeft;
   const chao2Position = chao2.offsetLeft;
-  if (pipePosition <= 85 && pipePosition > 0 && marioPosition < pipe.height) {
+  if (pipePosition <= pipePositionRefer && pipePosition > 0 && marioPosition < pipe.height) {
     pipe.style.animation = 'none';
     pipe.style.left = `${pipePosition}px`;
     mario.style.animation = 'none';
