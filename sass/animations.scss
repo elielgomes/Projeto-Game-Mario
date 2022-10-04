@@ -2,15 +2,19 @@
 .clouds-animation-1 {
     @include animation-velocity(clouds-animation-1, 20000ms, linear, infinite)
 }
+
 .clouds-animation-2 {
     @include animation-velocity(clouds-animation-2, 18000ms, linear, infinite)
 }
+
 .clouds-animation-3 {
     @include animation-velocity(clouds-animation-3, 16000ms, linear, infinite)
 }
+
 .clouds-animation-4 {
     @include animation-velocity(clouds-animation-4, 14000ms, linear, infinite)
 }
+
 .clouds-animation-5 {
     @include animation-velocity(clouds-animation-5, 12000ms, linear, infinite)
 }
@@ -341,6 +345,7 @@
         right: 100%;
     }
 }
+
 @keyframes clouds-animation-4 {
     from {
         right: -750px;
@@ -350,6 +355,7 @@
         right: 100%;
     }
 }
+
 @keyframes clouds-animation-4 {
     from {
         right: -800px;
@@ -360,25 +366,25 @@
     }
 }
 
-@media (max-width:1000px){
+@media (max-width:1000px) {
 
     @keyframes jump {
         0% {
             bottom: 0px;
         }
-    
+
         40% {
             bottom: 120px;
         }
-    
+
         50% {
             bottom: 120px;
         }
-    
+
         60% {
             bottom: 120px;
         }
-    
+
         100% {
             bottom: 0px;
         }

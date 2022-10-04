@@ -19,8 +19,7 @@
 
 body {
     height: 100vh;
-    background-image: url('../assets/te28nshadog61.webp');
-    background-size: cover;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,32 +109,43 @@ img#frame {
     width: 500px;
 }
 
-.card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    position: absolute;
-    width: 700px;
-    height: 500px;
 
+.card {
+    text-align: center;
+    position: absolute;
+    width: 500px;
+    height: 500px;
 }
 
 .text-card {
     font-family: 'super-mario';
     font-size: 20px;
+    margin-top: 15px;
     color: #fff;
     text-shadow: 1px 1px 2px black;
 }
 
-button#play {
-    margin-top: 20px;
+button {
+    margin-top: 40px;
     text-shadow: 2px 2px 2px black;
     color: #fff;
     font-family: "super-mario";
     font-size: 40px;
     background-color: transparent;
     border: none;
+}
+
+.card-normal {
+    display: none;
+}
+
+.card-new-record {
+    display: none;
+}
+
+.container-mario-win {
+    display: flex;
+    justify-content: center;
 }
 
 #mario-win {
@@ -224,7 +234,7 @@ button#play {
         font-size: 12px;
     }
 
-    button#play {
+    button {
         margin-top: 10px;
         font-size: 20px;
     }

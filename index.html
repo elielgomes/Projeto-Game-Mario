@@ -17,19 +17,34 @@
                 <p id="text-score">0</p>
                 <img class="clouds clouds-animation-1" src="assets/clouds.png" alt="clouds-image">
                 <img class="mario" src="assets/mario.gif" alt="mario-gif" id="mario">
-                <img class="pipe animation-pipe-3" src="assets/pipe.png" alt="pipe-image">
+                <img class="pipe animation-pipe-1" src="assets/pipe.png" alt="pipe-image">
             </div>
             <div class="container-grama">
                 <div class="grama">
                 </div>
             </div>
             <div class="container-chao">
-                <img class="chao-1 animation-chao1-3" src="assets/chao.png" alt="chao-image">
-                <img class="chao-2 animation-chao2-3" src="assets/chao.png" alt="chao-image">
+                <img class="chao-1 animation-chao1-1" src="assets/chao.png" alt="chao-image">
+                <img class="chao-2 animation-chao2-1" src="assets/chao.png" alt="chao-image">
             </div>
         </div>
         <img id='frame' src="assets/widescreen.png" alt="frame">
+
+        <div class="card card-normal">
+            <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
+                <p class="text-card record-score">Record score: 0</p>
+                <p class="text-card last-score">Last score: 0</p>
+            <button type="button" onclick="reloadFrame()">PLAY</button>
+        </div>
+
+        <div class="card card-new-record">
+            <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
+            <p class="text-card" id="new-record">New Record: 0</p>
+            <button type="button" onclick="reloadFrame()">PLAY</button>
+            <div class="container-mario-win">
+                <img src="assets/mario-win.png" alt="win" id="mario-win">
+            </div>
+        </div>
         
 </body>
-
 </html>
