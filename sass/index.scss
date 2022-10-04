@@ -61,6 +61,7 @@ img#frame {
     position: absolute;
     width: 150px;
     bottom: 0px;
+    color: 120;
 }
 
 .jump {
@@ -85,7 +86,7 @@ img#frame {
     width: 80px;
     height: 80px;
     left: -80px;
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 
 .container-chao {
@@ -153,11 +154,12 @@ button {
     width: 75px;
 }
 
-.mario-lose {
+#mario-lose {
     position: absolute;
     width: 75px;
     margin-left: 50px;
     bottom: 0px;
+    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -231,9 +233,10 @@ button {
         bottom: 0px;
     }
 
-    .mario-lose {
+    #mario-lose {
         width: 50px;
-        margin-left: 72px;
+        height: 75px;
+        margin-left: 35px;
         position: absolute;
     }
 

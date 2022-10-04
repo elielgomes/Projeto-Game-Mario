@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-let mario = document.querySelector('#mario');
+const mario = document.querySelector('#mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
 const pipeAnimation = document.querySelector('.pipe-animation');
@@ -8,6 +8,7 @@ const chao2 = document.querySelector(".chao-2");
 let cardNormal = document.querySelector(".card-normal");
 let cardNewRecord = document.querySelector(".card-new-record");
 let displayScore = document.getElementById("text-score");
+const marioLose = document.querySelector('#mario-lose');
 let pipePosition;
 let gameData = JSON.parse(localStorage.getItem('gameData') ?? '{}');
 gameData.maxScore = gameData.maxScore ?? 0;
@@ -31,11 +32,10 @@ function reloadFrame() {
   clouds.style.animation = '';
   pipe.style.animation = '';
   pipe.style.left = '';
+  marioLose.style.display = 'none';
+  mario.style.display = 'initial';
   mario.style.animation = '';
   mario.style.bottom = '';
-  mario.src = '/assets/mario.gif';
-  mario.classList.add('mario');
-  mario.classList.remove('mario-lose');
   chao1.style.animation = '';
   chao2.style.animation = '';
   chao1.style.left = '';
@@ -56,14 +56,13 @@ function verifica() {
   const cloudsPostion = clouds.offsetLeft;
   const chao1Position = chao1.offsetLeft;
   const chao2Position = chao2.offsetLeft;
-  if (pipePosition <= 120 && pipePosition > 0 && marioPosition < pipe.height) {
+  if (pipePosition <= 85 && pipePosition > 0 && marioPosition < pipe.height) {
     pipe.style.animation = 'none';
     pipe.style.left = `${pipePosition}px`;
     mario.style.animation = 'none';
-    mario.style.bottom = `${marioPosition}px`;
-    mario.src = '/assets/game-over.png';
-    mario.classList.add('mario-lose');
-    mario.classList.remove('mario');
+    mario.style.display = 'none'; 
+    marioLose.style.display = 'initial';
+    marioLose.style.bottom = `${marioPosition}px`;
     clouds.style.left = `${cloudsPostion}px`
     clouds.style.animation = 'none';
     chao1.style.animation = 'none';
@@ -72,14 +71,15 @@ function verifica() {
     chao2.style.left = `${chao2Position}px`;
     clearInterval(loop)
     clearInterval(increaseScore);
+
     if (score > gameData.maxScore) {
-      mario.style.display = 'none';
+
+      marioLose.style.display = 'none';
       gameData.maxScore = score;
       localStorage.setItem('gameData', JSON.stringify(gameData));
       cardNewRecord.style.display = 'initial';
       let newRecord = document.querySelector("#new-record");
       newRecord.textContent = `New record: ${gameData.maxScore * 10}`;
-      console.log(gameData.maxScore)
     }
     else {
       localStorage.setItem('gameData', JSON.stringify(gameData));
