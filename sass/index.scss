@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
 }
 
 body {
@@ -126,7 +127,7 @@ img#frame {
 }
 
 button {
-    margin-top: 40px;
+    margin-top: 42px;
     text-shadow: 2px 2px 2px black;
     color: #fff;
     font-family: "super-mario";
@@ -189,13 +190,13 @@ button {
     }
 
     .mario {
-        width: 90px;
+        width: 100px;
     }
 
     .container-grama {
         width: 100vw;
     }
-    
+
     .pipe {
         width: 50px;
         height: 50px;
@@ -207,31 +208,31 @@ button {
     }
 
     #logo-supermario {
-        width: 200px;
+        width: 300px;
     }
-  
+
     .card {
         width: 300px;
-        height: 200px;
+        height: 320px;
     }
 
     .text-card {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     button {
-        margin-top: 10px;
-        font-size: 20px;
+        margin-top: 16px;
+        font-size: 25px;
     }
 
     #mario-win {
-       margin-top: 10px;
+        margin-top: 10px;
         width: 50px;
     }
 
     .mario-lose {
         width: 50px;
-        margin-left: 67px;
+        margin-left: 72px;
         position: absolute;
     }
 
