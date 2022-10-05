@@ -5,6 +5,7 @@ const clouds = document.querySelector('.clouds');
 const pipeAnimation = document.querySelector('.pipe-animation');
 const chao1 = document.querySelector(".chao-1");
 const chao2 = document.querySelector(".chao-2");
+let cardInicial = document.querySelector(".card-inicial")
 let cardNormal = document.querySelector(".card-normal");
 let cardNewRecord = document.querySelector(".card-new-record");
 let displayScore = document.getElementById("text-score");
@@ -25,6 +26,7 @@ const stageClear = new Audio();
 stageClear.src = 'assets/sounds/stage-clear.mp3';
 
 const jump = () => {
+
   mario.classList.add('jump');
   jumpSound.play()
   setTimeout(() => {
@@ -33,23 +35,39 @@ const jump = () => {
 
 };
 
+let loop = setInterval(() => {
+
+  verifica()
+  velocidade()
+}, 10)
 
 
 let increaseScore = setInterval(() => {
+
   score += 1;
   displayScore.textContent = score * 10;
+
+
 }, 1000);
 
+clearInterval(increaseScore)
+clearInterval(loop)
+pipe.style.display = 'none';
+clouds.style.display = 'none';
 
 function reloadFrame() {
+
   deathSound.pause();
   stageClear.pause();
   jumpSound.src = 'assets/sounds/jump.mp3';
+  cardInicial.style.display = 'none';
   cardNewRecord.style.display = 'none';
   cardNormal.style.display = 'none'
   displayScore.textContent = 0;
+  clouds.style.display = 'initial';
   clouds.style.left = '';
   clouds.style.animation = '';
+  pipe.style.display = 'initial';
   pipe.style.animation = '';
   pipe.style.left = '';
   marioLose.style.display = 'none';
@@ -72,6 +90,7 @@ function reloadFrame() {
 }
 
 function verifica() {
+
   pipePosition = pipe.offsetLeft;
   let pipePositionRefer = pipe.width + 35
   const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
@@ -84,7 +103,7 @@ function verifica() {
     pipe.style.animation = 'none';
     pipe.style.left = `${pipePosition}px`;
     mario.style.animation = 'none';
-    mario.style.display = 'none'; 
+    mario.style.display = 'none';
     marioLose.style.display = 'initial';
     marioLose.style.bottom = `${marioPosition}px`;
     clouds.style.left = `${cloudsPostion}px`
@@ -98,7 +117,7 @@ function verifica() {
 
     if (score > gameData.maxScore) {
       deathSound.play()
-      setTimeout(()=>{
+      setTimeout(() => {
         deathSound.pause()
         stageClear.play()
         marioLose.style.display = 'none';
@@ -107,23 +126,24 @@ function verifica() {
         cardNewRecord.style.display = 'initial';
         let newRecord = document.querySelector("#new-record");
         newRecord.textContent = `New record: ${gameData.maxScore * 10}`;
-      },2000)
+      }, 2000)
     }
     else {
       deathSound.play()
-      setTimeout(()=>{
+      setTimeout(() => {
         localStorage.setItem('gameData', JSON.stringify(gameData));
         cardNormal.style.display = 'initial';
         let recordScore = document.querySelector(".record-score");
         let lastScore = document.querySelector(".last-score");
         lastScore.textContent = `Last score: ${score * 10}`
         recordScore.textContent = `Record score: ${gameData.maxScore * 10}`
-      },1500) 
+      }, 1500)
     }
   };
 }
 
 function velocidade() {
+
   pipePosition = pipe.offsetLeft;
   const cloudsPostion = clouds.offsetLeft;
   if (score > 20) {
@@ -215,11 +235,6 @@ function velocidade() {
     clouds.classList.add('clouds-animation-5');
   }
 }
-
-let loop = setInterval(() => {
-  verifica()
-  velocidade()
-}, 10)
 
 
 document.addEventListener('keydown', jump);

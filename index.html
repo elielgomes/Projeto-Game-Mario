@@ -30,16 +30,21 @@
         </div>
     </div>
     <img id='frame' src="assets/widescreen.png" alt="frame">
-
+    
+    <div class="card card-inicial">
+        <img src="assets/super-mario-logo.png" alt="logo" class="logo-supermario">
+        <p class="text-card">Tap key or screen to jump</p>
+        <button type="button" onclick="reloadFrame()">PLAY</button>
+    </div>
     <div class="card card-normal">
-        <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
+        <img src="assets/super-mario-logo.png" alt="logo" class="logo-supermario">
         <p class="text-card record-score">Record score: 0</p>
         <p class="text-card last-score">Last score: 0</p>
         <button type="button" onclick="reloadFrame()">PLAY</button>
     </div>
 
     <div class="card card-new-record">
-        <img src="assets/super-mario-logo.png" alt="logo" id="logo-supermario">
+        <img src="assets/super-mario-logo.png" alt="logo" class="logo-supermario">
         <p class="text-card" id="new-record">New Record: 0</p>
         <button type="button" onclick="reloadFrame()">PLAY</button>
         <div class="container-mario-win">
