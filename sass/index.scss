@@ -54,7 +54,6 @@ img#frame {
 .clouds {
     position: absolute;
     margin-top: 5px;
-    width: 500px;
 }
 
 .mario {
@@ -128,7 +127,7 @@ img#frame {
 }
 
 button {
-    margin-top: 42px;
+    margin-top: 37px;
     text-shadow: 2px 2px 2px black;
     color: #fff;
     font-family: "super-mario";
@@ -152,6 +151,7 @@ button {
 
 #mario-win {
     width: 75px;
+    height: 124px;
 }
 
 #mario-lose {
@@ -230,6 +230,7 @@ button {
     #mario-win {
         margin-top: 9px;
         width: 50px;
+        height: 75px;
         bottom: 0px;
     }
 
