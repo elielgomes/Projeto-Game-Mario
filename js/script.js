@@ -19,10 +19,10 @@ let jumpSound = new Audio();
 jumpSound.src = 'assets/sounds/jump.mp3';
 
 const deathSound = new Audio();
-deathSound.src = 'assets/sounds/death.wav';
+deathSound.src = 'assets/sounds/death.mp3';
 
 const stageClear = new Audio();
-stageClear.src = 'assets/sounds/stage-clear.wav';
+stageClear.src = 'assets/sounds/stage-clear.mp3';
 
 const jump = () => {
   mario.classList.add('jump');
