@@ -1,7 +1,7 @@
 # Projeto-Game-Mario
- 
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/108281436/194373200-a41ec0c4-e7f9-409c-95b8-40b1e7dc1e73.PNG" alt="capa-mario"/>
+<img src="https://user-images.githubusercontent.com/108281436/194373200-a41ec0c4-e7f9-409c-95b8-40b1e7dc1e73.PNG" alt="capa-mario"/>
 </p>
 
 
@@ -30,16 +30,31 @@
 
 
 # 🛠️ Funcionalidades e Demonstração da Aplicação
-![tela-inicial-mobile](https://user-images.githubusercontent.com/108281436/194374427-83c60891-eb01-42a1-a3dd-edf53130f4b1.png)
-![tela-morte-mobile](https://user-images.githubusercontent.com/108281436/194374444-b75f9e84-7210-439a-bac5-459e2ff87a4b.png)
-![tela-record-mobile](https://user-images.githubusercontent.com/108281436/194374459-5d8835e3-acdb-4c1f-885a-228e6a5b06f5.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/108281436/194374427-83c60891-eb01-42a1-a3dd-edf53130f4b1.png" alt="image"/>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/108281436/194374444-b75f9e84-7210-439a-bac5-459e2ff87a4b.png" alt="image"/>
+</p>
+
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/108281436/194374459-5d8835e3-acdb-4c1f-885a-228e6a5b06f5.png" alt="image"/>
+</p>
 
 
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/108281436/194374506-c56deace-8e9c-4dc7-988e-a0c46339b841.png" alt="image"/>
+</p>
 
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/108281436/194374573-454df7e6-5139-416b-ad3c-0d918676ac98.png" alt="image"/>
+</p>
 
-![tela-inicial](https://user-images.githubusercontent.com/108281436/194374506-c56deace-8e9c-4dc7-988e-a0c46339b841.png)
-![tela-morte](https://user-images.githubusercontent.com/108281436/194374573-454df7e6-5139-416b-ad3c-0d918676ac98.png)
-![tela-record](https://user-images.githubusercontent.com/108281436/194374592-605a89f3-ba8f-49af-b23f-13fb267fa4d4.png)
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/108281436/194374592-605a89f3-ba8f-49af-b23f-13fb267fa4d4.png" alt="image"/>
+</p>
 
 
 https://user-images.githubusercontent.com/108281436/194371579-fe8473e5-de1a-4480-b5ef-b791d953fe6c.mp4
