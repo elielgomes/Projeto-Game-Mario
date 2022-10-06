@@ -13,14 +13,14 @@
 
 # 🔍 Indice
 
-* [Badges](#Badges)
-* [Índice](#Índice)
-* [Descrição do Projeto](https://github.com/elielgomes/Projeto-Gerador-QRCode/blob/main/README.md#%EF%B8%8F-descri%C3%A7%C3%A3o-do-projeto)
-* [Status do Projeto](https://github.com/elielgomes/Projeto-Gerador-QRCode/blob/main/README.md#-status-do-projeto)
-* [Funcionalidades e Demonstração da Aplicação](https://github.com/elielgomes/Projeto-Gerador-QRCode/blob/main/README.md#%EF%B8%8F-funcionalidades-e-demonstra%C3%A7%C3%A3o-da-aplica%C3%A7%C3%A3o)
-* [Acesso ao Projeto](https://github.com/elielgomes/Projeto-Gerador-QRCode/blob/main/README.md#-acesso-ao-projeto)
-* [Tecnologias utilizadas](https://github.com/elielgomes/Projeto-Gerador-QRCode/blob/main/README.md#-tecnologias-utilizadas)
-* [Licença](https://github.com/elielgomes/Projeto-Gerador-QRCode/blob/main/README.md#-licen%C3%A7a)
+* [Badges](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#%EF%B8%8F-badges)
+* [Índice](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#-indice)
+* [Descrição do Projeto](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#%EF%B8%8F-descri%C3%A7%C3%A3o-do-projeto)
+* [Status do Projeto](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#-status-do-projeto)
+* [Funcionalidades e Demonstração da Aplicação](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#%EF%B8%8F-funcionalidades-e-demonstra%C3%A7%C3%A3o-da-aplica%C3%A7%C3%A3o)
+* [Acesso ao Projeto](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#-acesso-ao-projeto)
+* [Tecnologias utilizadas](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#-tecnologias-utilizadas)
+* [Licença](https://github.com/elielgomes/Projeto-Game-Mario/blob/main/README.md#-licen%C3%A7a)
 
 
 # ✏️ Descrição do Projeto
