@@ -54,15 +54,15 @@
 }
 
 .animation-pipe-9 {
-    @include animation-velocity(pipe-animation-9, 1200ms, linear, infinite)
+    @include animation-velocity(pipe-animation-9, 1250ms, linear, infinite)
 }
 
 .animation-pipe-10 {
-    @include animation-velocity(pipe-animation-9, 1000ms, linear, infinite)
+    @include animation-velocity(pipe-animation-9, 1200ms, linear, infinite)
 }
 
 .animation-pipe-11 {
-    @include animation-velocity(pipe-animation-10, 800ms, linear, infinite)
+    @include animation-velocity(pipe-animation-10, 1100ms, linear, infinite)
 }
 
 
@@ -278,17 +278,17 @@
     }
 
     100% {
-        left: -400px;
+        left: -200px;
     }
 }
 
 @keyframes pipe-animation-10 {
     0% {
-        left: 400%;
+        left: 350%;
     }
 
     100% {
-        left: -400px;
+        left: -300px;
     }
 }
 

@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: "super-mario";
-    src: url("../assets/Super-Mario-World.ttf") format('truetype');
+    src: url("/assets/Super-Mario-World.ttf") format('truetype');
 }
 
 * {
@@ -19,17 +19,30 @@
 
 body {
     height: 100vh;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
+    background-color: #ffe7b5;
+    background-image: url('/assets/background.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 img#frame {
     position: absolute;
     width: 1092px;
     pointer-events: none;
+}
+
+.game-board {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
 #text-score {
@@ -42,13 +55,31 @@ img#frame {
     margin-right: 30px;
 }
 
-.game-board {
-    width: 1000px;
+.card {
+    text-align: center;
+    position: absolute;
+    width: 500px;
     height: 500px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.card-normal {
+    display: none;
+}
+
+.card-new-record {
+    display: none;
+}
+
+.logo-supermario {
+    width: 500px;
+}
+
+.text-card {
+    font-family: 'super-mario';
+    font-size: 20px;
+    margin-top: 15px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
 }
 
 .clouds {
@@ -106,45 +137,6 @@ img#frame {
     bottom: 0px;
 }
 
-.logo-supermario {
-    width: 500px;
-}
-
-
-.card {
-    text-align: center;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-}
-
-.text-card {
-    font-family: 'super-mario';
-    font-size: 20px;
-    margin-top: 15px;
-    color: #fff;
-    text-shadow: 1px 1px 2px black;
-}
-
-button {
-    margin-top: 37px;
-    text-shadow: 2px 2px 2px black;
-    color: #fff;
-    font-family: "super-mario";
-    font-size: 40px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.card-normal {
-    display: none;
-}
-
-.card-new-record {
-    display: none;
-}
-
 .container-mario-win {
     display: flex;
     justify-content: center;
@@ -161,6 +153,17 @@ button {
     margin-left: 50px;
     bottom: 0px;
     display: none;
+}
+
+button {
+    margin-top: 37px;
+    text-shadow: 2px 2px 2px black;
+    color: #fff;
+    font-family: "super-mario";
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 @media (max-width: 1000px) {
