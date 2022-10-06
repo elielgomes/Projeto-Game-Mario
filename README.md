@@ -37,9 +37,13 @@ O  projeto Game Mário é um jogo eletrônico de corrida interminável totalment
   Telas na versão mobile.
 </h2>
 
+<br>
+
 <p align="center">
 Na versão mobile, o usuário interage com a aplicação apenas com toques na tela, fazendo assim o Mário pular.
 </p>
+
+<br>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/108281436/194374427-83c60891-eb01-42a1-a3dd-edf53130f4b1.png" alt="image"/>
@@ -59,7 +63,13 @@ Na versão mobile, o usuário interage com a aplicação apenas com toques na te
   Telas na versão desktop.
 </h2>
 
+<br>
+
+<p align="center">
 Na versão desktop o usuário tem uma melhor experiencia e jogabilidade, também tem a opção de pressionar qualquer tecla para interagir com a aplicação. 
+</p>
+
+<br>
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/108281436/194374506-c56deace-8e9c-4dc7-988e-a0c46339b841.png" alt="image"/>
