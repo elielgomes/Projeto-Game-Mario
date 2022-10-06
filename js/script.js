@@ -5,28 +5,32 @@ const clouds = document.querySelector('.clouds');
 const pipeAnimation = document.querySelector('.pipe-animation');
 const chao1 = document.querySelector(".chao-1");
 const chao2 = document.querySelector(".chao-2");
+const marioLose = document.querySelector('#mario-lose');
 let cardInicial = document.querySelector(".card-inicial")
 let cardNormal = document.querySelector(".card-normal");
 let cardNewRecord = document.querySelector(".card-new-record");
 let displayScore = document.getElementById("text-score");
-const marioLose = document.querySelector('#mario-lose');
-let pipePosition;
-
 let gameData = JSON.parse(localStorage.getItem('gameData') ?? '{}');
 gameData.maxScore = gameData.maxScore ?? 0;
 let score = 0;
+let loop;
+let increaseScore;
+let pipePosition;
+let musicaTema;
 
-let jumpSound = new Audio();
+const jumpSound = new Audio();
 jumpSound.src = 'assets/sounds/jump.mp3';
 
+const temaSound = new Audio();
+temaSound.src = 'assets/sounds/tema.mp3';
 const deathSound = new Audio();
 deathSound.src = 'assets/sounds/death.mp3';
 
 const stageClear = new Audio();
 stageClear.src = 'assets/sounds/stage-clear.mp3';
 
-const jump = () => {
 
+const jump = () => {
   mario.classList.add('jump');
   jumpSound.play()
   setTimeout(() => {
@@ -35,28 +39,12 @@ const jump = () => {
 
 };
 
-let loop = setInterval(() => {
-
-  verifica()
-  velocidade()
-}, 10)
-
-
-let increaseScore = setInterval(() => {
-
-  score += 1;
-  displayScore.textContent = score * 10;
-
-
-}, 1000);
-
-clearInterval(increaseScore)
-clearInterval(loop)
 pipe.style.display = 'none';
 clouds.style.display = 'none';
 
 function reloadFrame() {
-
+  temaSound.src = 'assets/sounds/tema.mp3';
+  temaSound.play();
   deathSound.pause();
   stageClear.pause();
   jumpSound.src = 'assets/sounds/jump.mp3';
@@ -79,14 +67,24 @@ function reloadFrame() {
   chao1.style.left = '';
   chao2.style.left = '';
   score = 0;
+
   increaseScore = setInterval(() => {
     score += 1;
     displayScore.textContent = score * 10;
   }, 1000);
+
   loop = setInterval(() => {
     verifica()
     velocidade()
-  }, 10)
+  }, 10);
+
+  musicaTema = setInterval(()=>{
+    temaSound.src = ''
+    temaSound.pause();
+    temaSound.src = 'assets/sounds/tema.mp3'
+    temaSound.play();
+    },88000)
+
 }
 
 function verifica() {
@@ -99,6 +97,8 @@ function verifica() {
   const chao2Position = chao2.offsetLeft;
 
   if (pipePosition <= pipePositionRefer && pipePosition > 0 && marioPosition < pipe.height) {
+    temaSound.pause()
+    clearInterval(musicaTema)
     jumpSound.src = '';
     pipe.style.animation = 'none';
     pipe.style.left = `${pipePosition}px`;
@@ -140,6 +140,7 @@ function verifica() {
       }, 1500)
     }
   };
+
 }
 
 function velocidade() {
