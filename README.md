@@ -25,10 +25,19 @@
 
 # ✏️ Descrição do Projeto
 
+O  projeto Game Mário é um jogo eletrônico de corrida interminável totalmente desenvolvido por mim, onde criei um jogo com a mecânica semelhante ao T-Rex Game do Google, porém com a temática do Super Mário da Nintendo, o jogo consiste no personagem Mário correndo em um cenário onde se depara com obstáculos,  o mesmo deve pular os obstáculos no tempo correto para não perder, de acordo com o seu  desempenho o usuário recebe uma pontuação,  e quanto maior a pontuação do usuário mais difícil fica a jogabilidade do game, pois a velocidade do Mário vai aumentando gradativamente,  consequentemente o tempo de reação do usuário deve ser  cada vez mais rápido para pular os obstáculos, caso o usuário perca sua pontuação e zerada e tem a opção de jogar novamente ,  o recorde de pontuação do usuário é armazenado,  caso ele reinicie o jogo ou volte outra hora para joga o mesmo não perde seu recorde, podendo assim tentar bate-lo. 
+
+ 
 # 📈 Status do Projeto
 ![Frame 16](https://user-images.githubusercontent.com/108281436/192803852-d0a0e110-a351-4eb9-ad0e-95cb36a0bb49.png)
 
 # 🛠️ Funcionalidades e Demonstração da Aplicação
+
+<h2 align="center">
+  Telas na versão mobile.
+</h2>
+
+Na versão mobile, o usuário interage com a aplicação apenas com toques na tela, fazendo assim o Mário pular.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/108281436/194374427-83c60891-eb01-42a1-a3dd-edf53130f4b1.png" alt="image"/>
@@ -42,6 +51,13 @@
    <img src="https://user-images.githubusercontent.com/108281436/194374459-5d8835e3-acdb-4c1f-885a-228e6a5b06f5.png" alt="image"/>
 </p>
 
+
+
+<h2 align="center">
+  Telas na versão desktop.
+</h2>
+
+Na versão desktop o usuário tem uma melhor experiencia e jogabilidade, também tem a opção de pressionar qualquer tecla para interagir com a aplicação. 
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/108281436/194374506-c56deace-8e9c-4dc7-988e-a0c46339b841.png" alt="image"/>
@@ -82,6 +98,4 @@ ou acesse direto pelo link https://game-mario-nine.vercel.app/
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE) <br>
 Game Mario tem licença MIT
 
-# video
-https://user-images.githubusercontent.com/108281436/194371579-fe8473e5-de1a-4480-b5ef-b791d953fe6c.mp4
 
