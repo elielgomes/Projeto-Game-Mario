@@ -66,7 +66,7 @@ Na versão mobile, o usuário interage com a aplicação apenas com toques na te
 <br>
 
 <p align="center">
-Na versão desktop o usuário tem uma melhor experiencia e jogabilidade, também tem a opção de pressionar qualquer tecla para interagir com a aplicação. 
+Na versão desktop o usuário tem uma melhor experiência e jogabilidade, também tem a opção de pressionar qualquer tecla para interagir com a aplicação. 
 </p>
 
 <br>
