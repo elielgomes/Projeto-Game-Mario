@@ -30,6 +30,19 @@
 
 
 # 🛠️ Funcionalidades e Demonstração da Aplicação
+![tela-inicial-mobile](https://user-images.githubusercontent.com/108281436/194374427-83c60891-eb01-42a1-a3dd-edf53130f4b1.png)
+![tela-morte-mobile](https://user-images.githubusercontent.com/108281436/194374444-b75f9e84-7210-439a-bac5-459e2ff87a4b.png)
+![tela-record-mobile](https://user-images.githubusercontent.com/108281436/194374459-5d8835e3-acdb-4c1f-885a-228e6a5b06f5.png)
+
+
+
+
+![tela-inicial](https://user-images.githubusercontent.com/108281436/194374506-c56deace-8e9c-4dc7-988e-a0c46339b841.png)
+![tela-morte](https://user-images.githubusercontent.com/108281436/194374573-454df7e6-5139-416b-ad3c-0d918676ac98.png)
+![tela-record](https://user-images.githubusercontent.com/108281436/194374592-605a89f3-ba8f-49af-b23f-13fb267fa4d4.png)
+
+
+https://user-images.githubusercontent.com/108281436/194371579-fe8473e5-de1a-4480-b5ef-b791d953fe6c.mp4
 
 # 🔑 Acesso ao Projeto
 
@@ -42,7 +55,6 @@ ou acesse direto pelo link https://game-mario-nine.vercel.app/
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![Bootstrap5](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/Powershell-2CA5E0?style=for-the-badge&logo=powershell&logoColor=white)
 <br>
