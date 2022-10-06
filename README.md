@@ -1,4 +1,4 @@
-# Projeto-Game-Mario
+# Game Mario
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/108281436/194373200-a41ec0c4-e7f9-409c-95b8-40b1e7dc1e73.PNG" alt="capa-mario"/>
@@ -25,7 +25,7 @@
 
 # ✏️ Descrição do Projeto
 
-O  projeto Game Mário é um jogo eletrônico de corrida interminável totalmente desenvolvido por mim, onde criei um jogo com a mecânica semelhante ao T-Rex Game do Google, porém com a temática do Super Mário da Nintendo, o jogo consiste no personagem Mário correndo em um cenário onde se depara com obstáculos,  o mesmo deve pular os obstáculos no tempo correto para não perder, de acordo com o seu  desempenho o usuário recebe uma pontuação,  e quanto maior a pontuação do usuário mais difícil fica a jogabilidade do game, pois a velocidade do Mário vai aumentando gradativamente,  consequentemente o tempo de reação do usuário deve ser  cada vez mais rápido para pular os obstáculos, caso o usuário perca sua pontuação e zerada e tem a opção de jogar novamente ,  o recorde de pontuação do usuário é armazenado,  caso ele reinicie o jogo ou volte outra hora para joga o mesmo não perde seu recorde, podendo assim tentar bate-lo. 
+Game Mário é um jogo eletrônico de corrida interminável totalmente desenvolvido por mim, onde criei um jogo com a mecânica semelhante ao T-Rex Game do Google, porém com a temática do Super Mário da Nintendo, o jogo consiste no personagem Mário correndo em um cenário onde se depara com obstáculos,  o mesmo deve pular os obstáculos no tempo correto para não perder, de acordo com o seu  desempenho o usuário recebe uma pontuação,  e quanto maior a pontuação do usuário mais difícil fica a jogabilidade do game, pois a velocidade do Mário vai aumentando gradativamente,  consequentemente o tempo de reação do usuário deve ser  cada vez mais rápido para pular os obstáculos, caso o usuário perca sua pontuação e zerada e tem a opção de jogar novamente ,  o recorde de pontuação do usuário é armazenado,  caso ele reinicie o jogo ou volte outra hora para joga o mesmo não perde seu recorde, podendo assim tentar bate-lo. 
 
  
 # 📈 Status do Projeto
