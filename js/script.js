@@ -23,6 +23,7 @@ jumpSound.src = 'assets/sounds/jump.mp3';
 
 const temaSound = new Audio();
 temaSound.src = 'assets/sounds/tema.mp3';
+
 const deathSound = new Audio();
 deathSound.src = 'assets/sounds/death.mp3';
 
@@ -55,9 +56,11 @@ function reloadFrame() {
   clouds.style.display = 'initial';
   clouds.style.left = '';
   clouds.style.animation = '';
+  clouds.className = 'clouds clouds-animation-1'
   pipe.style.display = 'initial';
   pipe.style.animation = '';
   pipe.style.left = '';
+  pipe.className= 'pipe animation-pipe-1';
   marioLose.style.display = 'none';
   mario.style.display = 'initial';
   mario.style.animation = '';
@@ -66,6 +69,8 @@ function reloadFrame() {
   chao2.style.animation = '';
   chao1.style.left = '';
   chao2.style.left = '';
+  chao1.className ='chao-1 animation-chao1-1'
+  chao2.className ='chao-2 animation-chao2-1';
   score = 0;
 
   increaseScore = setInterval(() => {
@@ -147,74 +152,74 @@ function velocidade() {
 
   pipePosition = pipe.offsetLeft;
   const cloudsPostion = clouds.offsetLeft;
-  if (score > 20) {
+  if(score < 10) {
     pipe.classList.add('animation-pipe-1');
     chao1.classList.add('animation-chao1-1');
     chao2.classList.add('animation-chao2-1');
-  } else if (score > 20 && score < 40 && pipePosition < -80) {
+  } else if (score > 10 && score < 20 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-1');
     pipe.classList.add('animation-pipe-2');
     chao1.classList.remove('animation-chao1-1');
     chao2.classList.remove('animation-chao2-1');
     chao1.classList.add('animation-chao1-2');
     chao2.classList.add('animation-chao2-2');
-  } else if (score > 40 && score < 60 && pipePosition < -80) {
+  } else if (score > 20 && score < 30 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-2');
     pipe.classList.add('animation-pipe-3');
     chao1.classList.remove('animation-chao1-2');
     chao2.classList.remove('animation-chao2-2');
     chao1.classList.add('animation-chao1-3');
     chao2.classList.add('animation-chao2-3');
-  } else if (score > 60 && score < 80 && pipePosition < -80) {
+  } else if (score > 30 && score < 40 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-3');
     pipe.classList.add('animation-pipe-4');
     chao1.classList.remove('animation-chao1-3');
     chao2.classList.remove('animation-chao2-3');
     chao1.classList.add('animation-chao1-4');
     chao2.classList.add('animation-chao2-4');
-  } else if (score > 80 && score < 110 && pipePosition < -80) {
+  } else if (score > 40 && score < 60 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-4');
     pipe.classList.add('animation-pipe-5');
     chao1.classList.remove('animation-chao1-4');
     chao2.classList.remove('animation-chao2-4');
     chao1.classList.add('animation-chao1-5');
     chao2.classList.add('animation-chao2-5');
-  } else if (score > 110 && score < 140 && pipePosition < -80) {
+  } else if (score > 60 && score < 80 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-5')
     pipe.classList.add('animation-pipe-6')
     chao1.classList.remove('animation-chao1-5');
     chao2.classList.remove('animation-chao2-5');
     chao1.classList.add('animation-chao1-6');
     chao2.classList.add('animation-chao2-6');
-  } else if (score > 140 && score < 170 && pipePosition < -80) {
+  } else if (score > 80 && score < 100 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-6');
     pipe.classList.add('animation-pipe-7');
     chao1.classList.remove('animation-chao1-6');
     chao2.classList.remove('animation-chao2-6');
     chao1.classList.add('animation-chao1-7');
     chao2.classList.add('animation-chao2-7');
-  } else if (score > 170 && score < 200 && pipePosition < -80) {
+  } else if (score > 100 && score < 120 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-7');
     pipe.classList.add('animation-pipe-8');
     chao1.classList.remove('animation-chao1-7');
     chao2.classList.remove('animation-chao2-7');
     chao1.classList.add('animation-chao1-8');
     chao2.classList.add('animation-chao2-8');
-  } else if (score > 200 && score < 230 && pipePosition < -80) {
+  } else if (score > 120 && score < 150 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-8');
     pipe.classList.add('animation-pipe-9');
     chao1.classList.remove('animation-chao1-8');
     chao2.classList.remove('animation-chao2-8');
     chao1.classList.add('animation-chao1-9');
     chao2.classList.add('animation-chao2-9');
-  } else if (score > 230 && score < 250 && pipePosition < -80) {
+  } else if (score > 150 && score < 180 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-9');
     pipe.classList.add('animation-pipe-10');
     chao1.classList.remove('animation-chao1-9');
     chao2.classList.remove('animation-chao2-9');
     chao1.classList.add('animation-chao1-10');
     chao2.classList.add('animation-chao2-10');
-  } else if (score > 250 && score < 280 && pipePosition < -80) {
+  } else if (score > 180 && pipePosition < -80) {
     pipe.classList.remove('animation-pipe-10');
     pipe.classList.add('animation-pipe-11');
     chao1.classList.remove('animation-chao1-10');
