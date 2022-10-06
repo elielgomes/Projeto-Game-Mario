@@ -58,7 +58,6 @@ Na versão mobile, o usuário interage com a aplicação apenas com toques na te
 </p>
 
 
-
 <h2 align="center">
   Telas na versão desktop.
 </h2>
