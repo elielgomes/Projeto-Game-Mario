@@ -17,7 +17,7 @@ let loop;
 let increaseScore;
 let pipePosition;
 let musicaTema;
-
+let pipeRefer;
 const jumpSound = new Audio();
 jumpSound.src = 'assets/sounds/jump.mp3';
 
@@ -92,16 +92,18 @@ function reloadFrame() {
 
 }
 
+window.screen.width < 1000 ? pipeRefer = 85 : pipeRefer = 120;
+
 function verifica() {
 
   pipePosition = pipe.offsetLeft;
-  let pipePositionRefer = pipe.width + 35
+  
   const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''));
   const cloudsPostion = clouds.offsetLeft;
   const chao1Position = chao1.offsetLeft;
   const chao2Position = chao2.offsetLeft;
 
-  if (pipePosition <= pipePositionRefer && pipePosition > 0 && marioPosition < pipe.height) {
+  if (pipePosition <= pipeRefer && pipePosition > 0 && marioPosition < pipe.height) {
     temaSound.pause()
     clearInterval(musicaTema)
     jumpSound.src = '';
